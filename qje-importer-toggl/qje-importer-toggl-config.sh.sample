@@ -1,0 +1,19 @@
+#!/bin/bash
+# qje-importer-toggl-config.sh
+# by Witold Firlej (grizz) https://grizz.pl https://github.com/grizz-pl
+# Configuration file for qje-importer-toggl-weekly.sh and qje-importer-toggl-weekly.sh
+# version 0.2.0
+# 2021-02-21
+#
+# PLEASE read readme.md and comments below
+#
+
+### configuration
+API2_TOKEN=                                       # api token to v2 api - it can be obtained in profile settings https://track.toggl.com/profile
+API3_TOKEN=                                       # api token to v3 api (not published) - it can be obtained from developer tools in your browser
+TOGGL_WORKSPACE=                                  # your workspace number - it can be obtained from url go to https://track.toggl.com/reports and you will be redirected to https://track.toggl.com/reports/summary/TOGGL_WORKSPACE
+TARGET_FILE_DAILY_FORMAT="%Y.%m.%d.toggl.md"      # ex. 2021.02.20.toggl.md
+TARGET_FILE_WEEKLY_FORMAT="%Y.%m.%d.togglwk%V.md" # %V is a week number
+LAST_WEEKDAY=7                                    # which day of the week treat like the last. 7=Sunday
+ADD_DENDRON_FRONTMATTER=true                      # true/false add frontmatter used by Dendron
+WORKING_DIR="../entries"                          # where to store the files
